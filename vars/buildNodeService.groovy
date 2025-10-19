@@ -2,10 +2,10 @@
 
 def call(Map config) {
     stage("Install Dependencies") {
-        sh 'ls -lah'
-        sh 'cd products-cna-microservice'
-        sh 'ls -lah'
-        sh 'npm ci'
+        sh """
+        cd products-cna-microservice
+        npm ci
+        """
     }
     stage("Lint") {
         sh 'npm run lint || true'
