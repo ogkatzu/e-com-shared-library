@@ -1,6 +1,6 @@
 // vars/buildPythonService.groovy
 
-def call(String serviceDir)
+def call(String serviceDir) {
     dir(serviceDir) {
         stage("Install Dependencies") {
             sh 'pipenv install'
@@ -12,3 +12,4 @@ def call(String serviceDir)
             """
         }
     }
+} 
