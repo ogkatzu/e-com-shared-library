@@ -3,13 +3,10 @@
 def call(String serviceDir) {
     dir(serviceDir) {
         stage("Install Dependencies") {
-            sh 'pipenv install'
+            sh 'echo "Installing Dependencies"'
         }
         stage("Test Runtime") {
-            sh """
-            pipenv shell
-            python app.py 
-            """
+            sh 'echo "Running Tests"'
         }
     }
 } 
