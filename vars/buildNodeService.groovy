@@ -2,6 +2,7 @@
 
 def call(Map config) {
     stage("Install Dependencies") {
+        sh 'ls -lah'
         sh 'npm ci'
     }
     stage("Lint") {
@@ -13,5 +14,5 @@ def call(Map config) {
             sh 'npm run build'
         }
     }
-    
+
 }
