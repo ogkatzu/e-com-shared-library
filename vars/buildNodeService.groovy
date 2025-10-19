@@ -7,9 +7,9 @@ def call(String serviceDir = 'products-cna-microservice') {
             npm ci
             """
         }
-        stage("Lint") {
-            sh 'npm run lint || true'
-        }
+        // stage("Lint") {
+        //     sh 'npm run lint || true'
+        // }
         stage("Build") {
             def packageJson = readJson file: 'package.json'
             if (packageJson.scripts?.build) {
