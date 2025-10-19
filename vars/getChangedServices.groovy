@@ -1,7 +1,7 @@
   // vars/getChangedServices.groovy
 
   def call(Map config = [:]) {
-      def baseBranch = config.baseBranch ?: 'origin/master'
+      def baseBranch = config.baseBranch ?: 'origin/main'
       def serviceMapping = [
           'products-cna-microservice': 'products',
           'cart-cna-microservice': 'cart',
