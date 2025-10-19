@@ -2,6 +2,7 @@
 
 def call(Map config) {
     stage("Install Dependencies") {
+        sh 'cd product-cna-miscroservice'
         sh 'ls -lah'
         sh 'npm ci'
     }
