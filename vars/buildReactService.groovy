@@ -6,7 +6,7 @@ def call(String serviceDir = 'store-ui') {
             sh 'npm install'
         }
         stage("Unit Testing") {
-            sh 'echo "Skipping Tests for Now!'
+            sh 'echo "Skipping Tests for Now!"'
         }
         stage("Build") {
             def packageJson = readJSON file: 'package.json'
