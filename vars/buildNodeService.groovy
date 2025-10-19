@@ -11,7 +11,7 @@ def call(String serviceDir = 'products-cna-microservice') {
         //     sh 'npm run lint || true'
         // }
         stage("Build") {
-            def packageJson = readJson file: 'package.json'
+            def packageJson = readJSON file: 'package.json'
             if (packageJson.scripts?.build) {
                 sh 'npm run build'
             }
