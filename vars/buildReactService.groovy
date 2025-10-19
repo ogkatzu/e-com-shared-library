@@ -1,6 +1,6 @@
 // vars/buildReactService.groovy
 
-def call(String serviceDir = 'store-ui') {
+def call(String serviceDir) {
     dir(serviceDir) {
         stage("Install Dependencies") {
             sh 'npm install'
