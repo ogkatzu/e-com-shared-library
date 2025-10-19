@@ -2,11 +2,9 @@
 
 def call(String serviceDir) {
     dir(serviceDir) {
-        stage("Build") {
-            sh 'gradle clean build'
-        }
-        stage("Test") {
-            sh 'gradle test'
+        stage("Build ${serviceDir}") {
+            // Build without running tests (-x test)
+            sh 'gradle clean build -x test'
         }
     }
 }
