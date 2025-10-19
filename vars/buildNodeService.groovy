@@ -1,10 +1,10 @@
 // vars/buildNodeService.groovy
 
-def call(String serviceDir = 'products-cna-microservice') {
+def call(String serviceDir) {
     dir(serviceDir) {
         stage("Install Dependencies") {
             sh """
-            npm ci
+            npm install
             """
         }
         // stage("Lint") {
